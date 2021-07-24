@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cube</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="estilo-cube.css">
+</head>
+
+<body>
+    <script>
+        $(document).ready(function(){
+
+            $('.boton').on('click', function () {
+                var angX = 0;
+                var angY = 0;
+
+                switch ($(this).attr("id")) {
+                    case "arriba":
+                        angX = angX + 90;
+                        break;
+                    case "abajo":
+                        angX = angX - 90;
+                        break;
+                    case "derecha":
+                        angY = angY + 90;
+                        break;
+                    case "izquierda":
+                        angY = angY - 90;
+                        break;
+                }
+                $('#cube').attr('style', 'transform: rotateX(' + angX + 'deg) rotateY(' + angY + 'deg);')
+
+            });
+        })
+
+
+    </script>
+    <section class="container">
+        <div id="cube">
+            <figure class="back">atrás</figure>
+            <figure class="left">izquierda</figure>
+            <figure class="bottom">abajo</figure>
+            <figure class="front">frente</figure>
+            <figure class="right">derecha</figure>
+            <figure class="top">arriba</figure>
+        </div>
+
+    </section>
+    <section class="botones">
+        <div class="boton" id="arriba">▲</div>
+        <div class="boton" id="abajo">▼</div>
+        <div class="boton" id="izquierda">◄</div>
+        <div class="boton" id="derecha">►</div>
+    </section>
+</body>
+
+</html>

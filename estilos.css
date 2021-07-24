@@ -1,0 +1,21 @@
+body{
+    background: #000;
+    font-family: "Gill Sans Extrabold", Helvetica, sans-serif;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+
+h1{
+    color: #f8e1f8;
+}
+
+.sam{
+    color:#75acda;
+    font-family: Courier, "Lucida Console", monospace 
+}
+
+.yenni{
+    color: #a12828;
+    font-family: Georgia, Cambria, Times, "Times New Roman";
+}
